@@ -1,0 +1,56 @@
+
+    
+
+<mat-toolbar ><h2 class="text-dark text-muted">
+  <span style="margin-left: 50%; font-size:xx-large; font-family: 'Times New Roman', Times, serif;font-weight: bold;
+color: antiquewhite;">
+PREFORMANCE MANAGEMENT SYSTEM
+</span>
+</h2>
+</mat-toolbar>
+<mat-card class="example-card" >
+    
+<div class="container-fluid" >
+  <div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-4">
+      <div class="card shadow">
+        <div class="card-body">
+
+
+          <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off">
+
+            <div>
+
+
+              <div class="input-fields" class="mb-3">
+                <label for="visually-hidden" class="form-label">	Email  </label>&nbsp;<br>
+                <input  type="email" name="email" formControlName="email" placeholder="Enter email"class="input-field"/>
+              </div>
+
+
+             
+
+              <div class="input-fields" class="mb-3">
+                <label for="visually-hidden" class="form-label">	Password </label>&nbsp;<br>
+                <input type="password" name="pass" formControlName="pass" placeholder="Enter the Password"   class="input-field"/>
+              </div><br>
+              <div class="button">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+              
+            </div>
+          </form>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+
+</div>
+</mat-card>
+
+

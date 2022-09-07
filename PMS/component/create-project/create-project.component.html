@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+    <mat-toolbar>
+        <h2 class="text-dark text-muted">
+            <span style="margin-left: 70%; font-size:xx-large; font-family: 'Times New Roman', Times, serif;font-weight: bold;
+                color: antiquewhite;">CREATE NEW PROJECT
+             </span>
+        </h2>
+    </mat-toolbar>
+    <form [formGroup]="addForm" novalidate class="form">
+        <div style="padding: 5em; ">
+      
+      
+            <mat-tab-group mat-stretch-tabs class="tabs">
+                <mat-tab [label]="'PROJECT DETAILS'" class="tab1">
+      
+                   <div class="Pdetailas"  >
+                         <div class="mb-3"  >
+                           <label for="visually-hidden" class="form-label">  Project name  </label>
+                          <input type="text" class="form-control"   name="projectName" formControlName="projectName">
+                          
+                        </div>
+      
+      
+                       <div class="mb-3" >
+                         <label for="visually-hidden" class="form-label">  Objectives </label>
+                         <input type="text" class="form-control" name="objectives" formControlName="objectives">
+                         
+                        </div>
+      
+                        <div class="mb-3" >
+                          <label for="visually-hidden" class="form-label">  Project Goal  </label>
+                         <input type="text" class="form-control"   name="goal" formControlName="goal" >
+                        </div>
+      
+                       <div  class="mb-3">
+                             <label for="visually-hidden" class="form-label">SDBIP REF NO</label>&nbsp;<br>
+                           <select type="text"  class="form-select" name="sdbipNo"  formControlName="sdbipNo" >
+                              <option >SDBIP REF NO one</option>
+                              <option >SDBIP REF NO two</option>
+                              <option >SDBIP REF NO three</option>
+                            </select>
+                        </div>
+      
+                    </div>
+      
+                </mat-tab>
+      
+                <mat-tab [label]="'CONTINUE'" class="tab2" [disabled]="false">
+                    <div class="Pdetailas"  >
+       
+                         <div  class="mb-3">
+                           <label for="visually-hidden" class="form-label">Select Project ID</label>&nbsp;<br>
+                            <select type="text" class="form-select" name="ProjectId"  formControlName="ProjectId">
+                                <option >Project ID one</option>
+                                 <option >Project ID two</option>
+                                <option >Project ID three</option>
+                              </select>
+                         </div>
+     
+                         <div class="mb-3" >
+                             <label for="visually-hidden" class="form-label">Institution  </label>
+                              <input type="text" class="form-control"  name="institution" formControlName="institution" >
+                         </div>
+     
+                         <div class="mb-3" >
+                             <label for="visually-hidden" class="form-label">Annual target </label>
+                             <input type="text" class="form-control"  name="Annualtarget" formControlName="Annualtarget">
+                         </div>
+     
+                         <div class="mb-3" >
+                             <label for="visually-hidden" class="form-label">  Due date  </label><br>
+                             <input type="date" name="Duedate" class=" form-control-date"  format="MM/DD/YYYY" formControlName="Duedate">
+                         </div>
+       
+     
+                     </div>
+       
+                 </mat-tab>
+       
+                 <mat-tab [label]="'FINALISING'" class="tab3"[disabled]="false">
+                   <div class="Pdetailas"  >
+       
+                         <div class="mb-3" >
+                            <label for="visually-hidden" class="form-label">Strategy</label>
+                            <input type="text" class="form-control" name="Strategy"  formControlName="Strategy" >
+                                </div>
+       
+                             <div  class="mb-3">
+                                <label for="visually-hidden" class="form-label">Select Department</label>&nbsp;<br>
+                                 <select type="text" class="form-select" name="Department"  placeholder="Department"  formControlName="Department" >
+                                     <option >Department name one</option>
+                                     <option >Department name two</option>
+                                     <option >Department name three</option>
+                                </select>
+                             </div>
+       
+       
+                            <div class="mb-3"  >
+                                 <label for="visually-hidden" class="form-label">  Annual Budget </label>
+                                 <input type="number" class="form-control" name="budget" formControlName="budget"  >
+                            </div>
+       
+                             <div>
+                                 <label for="visually-hidden" class="form-label">SET QUATERLY TARGET</label>&nbsp;<br>
+                                 <label for="visually-hidden" class="form-label">Q1</label>&nbsp;<br>
+                                  <input type="number" size="3" class="form-control"name="Q1" formControlName="Q1" >
+     
+                                 <br> <label for="visually-hidden" class="form-label">Q2</label>&nbsp;<br>
+                                  <input type="number" size="3" class="form-control"name="Q2"  formControlName="Q2" >
+     
+                                 <br><label for="visually-hidden" class="form-label">Q3</label>&nbsp;<br>
+                                 <input type="number" size="3" class="form-control"name="Q3" formControlName="Q3" >
+     
+                                 <br><label for="visually-hidden" class="form-label">Q4</label>&nbsp;<br>
+                                  <input type="number" size="3"class="form-control"name="Q4"  formControlName="Q4" >
+                              </div>
+       
+       
+       
+                              <button class="btn btn-success" (click)="onSubmit()">CREATE</button>
+
+       
+                          </div>
+                      </mat-tab>
+      
+                 </mat-tab-group>
+      
+                </div>
+        </form>
+    
+</body>
+</html>
+    
+  
